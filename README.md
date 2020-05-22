@@ -39,13 +39,15 @@ Commit your code regularly and use descriptive messages. This helps both you (in
 Demonstrate your understanding of this week's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] What is the purpose of using _sessions_?
-
+Basic usage: Sessions are a simple way to store data for individual users against a unique session ID. This can be used to persist state information between page requests. Session IDs are normally sent to the browser via session cookies and the ID is used to retrieve existing session data.
 - [ ] What does bcrypt do to help us store passwords in a secure manner.
-
+bcrypt has a significant advantage over a simply salted hash: bcrypt uses a modified key setup algorithm which is timely quite expensive. This is called key strengthening, and makes a password more secure against brute force attacks
 - [ ] What does bcrypt do to slow down attackers?
-
+bcrypt is designed to be slow and not to allow any shortcut. It takes more effort to brute force attack the password. The slower the algorithm, the less guesses can be made per second
 - [ ] What are the three parts of the JSON Web Token?
-
+Header.
+Payload.
+Signature.
 ## Minimum Viable Product
 
 Implement an User Authentication System. Hash user's passwords before saving them to the database. Use `JSON Web Tokens` or `Sessions and Cookies` to persist authentication across requests.
